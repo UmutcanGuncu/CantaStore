@@ -3,9 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/xampp/htdocs/eCommercialProject/includes/login.inc.php</file>
             <file>file:/C:/xampp/htdocs/eCommercialProject/includes/functions.inc.php</file>
-            <file>file:/C:/xampp/htdocs/eCommercialProject/index.php</file>
-            <file>file:/C:/xampp/htdocs/eCommercialProject/cart.php</file>
+            <file>file:/C:/xampp/htdocs/eCommercialProject/includes/register.inc.php</file>
+            <file>file:/C:/xampp/htdocs/eCommercialProject/contact.php</file>
+            <file>file:/C:/xampp/htdocs/eCommercialProject/login.php</file>
+            <file>file:/C:/xampp/htdocs/eCommercialProject/includes/place_order.php</file>
+            <file>file:/C:/xampp/htdocs/eCommercialProject/payment.php</file>
             <file>file:/C:/xampp/htdocs/eCommercialProject/checkout.php</file>
         </group>
     </open-files>

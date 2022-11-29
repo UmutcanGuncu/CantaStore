@@ -27,7 +27,7 @@ if(isset($_GET['product_id'])){
         <div class="container py-md-5">
             <!-- product right -->
             <div class="left-ads-display wthree">
-                <?php while($row = $product->fetch_assoc()){?>
+                <?php while($row = $product->fetch_assoc()){ ?>
                     
                 <div class="row">
                     
@@ -37,12 +37,24 @@ if(isset($_GET['product_id'])){
                     <div class="desc1-right col-md-6 pl-lg-3">
                         <h2><?php echo $row['product_name'];?> </h2>
                         <form method="post" action ="cart.php">
-                            <input type="hidden" name="product_id" value="<?php echo $row['product_id'];?>" />
+                        <input type="hidden" name="product_id" value="<?php echo $row['product_id'];?>" />
                         <input type="hidden" name="product_image" value="<?php echo $row['product_image'];?>" />
                         <input type="hidden" name="product_name" value="<?php echo $row['product_name'];?>" />
                         <input type="hidden" name="product_price" value="<?php echo $row['product_price'];?>" />
+                            <input type="hidden" name="product_stock" value="<?php echo $row['product_stock'];?>" />
                         <div class="share-desc mt-2"><?php echo $row['product_price'];?> TL <input type="number" name="product_quantity" value="1"/></div>
-                        <button class="btn btn-outline-primary btn-lg mt-2" name="add_to_cart">Sepete Ekle</button>
+                            <?php
+                             $product_stock = $row["product_stock"];
+
+                                if($product_stock >0){
+                                echo"<button class='btn btn-outline-primary btn-lg mt-2' name='add_to_cart'>Sepete Ekle</button>";
+                                }
+                                else{
+                                    echo"<button class='btn btn-outline-danger btn-lg mt-2' disabled='disabled' name='add_to_cart'>Sepete Ekle</button>";
+                                    echo"<div class='alert alert-danger' role='alert'>Ürün Stokta Bulunmamaktadır</div>";
+                                }
+                                ?>
+
                         </form>
 
                         <div class="available mt-3">
@@ -55,13 +67,18 @@ if(isset($_GET['product_id'])){
                                     
                                 </div>
                                 <p class="mt-3 italic-blue"><?php echo $row['product_description'];?></p>
+                                <p>
+
+                                <?php echo "Ürün Stoğu = $product_stock";?>
+
+                                </p>
                             </div>
                             <div class="clearfix"></div>
                         </div>
                     </div>
-                     <?php }?>
+
                 </div>
-               
+                <?php } ?>
                 <!--/row-->
                 <h3 class="title-wthree-single my-lg-5 my-4 text-left">Beğenebilceğiniz Ürünler</h3>
                 <div class="row shop-wthree-info text-center">
@@ -85,7 +102,11 @@ if(isset($_GET['product_id'])){
                                         <span class="money"><?php echo $row['product_price'];?></span>
                                     </div>
                                 </div>
+
                                </div>
+                        </div>
+                        <div>
+
                         </div>
                       
                     </div>

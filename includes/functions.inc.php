@@ -1,5 +1,6 @@
 <?php
 include ("../partials/connect.php");
+session_start();
 function createUser($name,$email,$username,$password,$connect)
 {
     mysqli_report(MYSQLI_REPORT_STRICT);
@@ -12,8 +13,9 @@ function createUser($name,$email,$username,$password,$connect)
    $hashedPwd = password_hash($password,PASSWORD_DEFAULT);
    mysqli_stmt_bind_param($stmt, "ssss",$name,$email,$username,$hashedPwd);
    mysqli_stmt_execute($stmt);
-   mysqli_stmt_close($stmt);
    $resultData = mysqli_stmt_get_result($stmt);
+   header("location: ../login.php");
+   
    
    
 }

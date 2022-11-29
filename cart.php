@@ -5,8 +5,13 @@ error_reporting(0);
 session_start();
 if(isset($_POST['add_to_cart']))
 {
+    $product_quantity=$_POST["product_quantity"];
+    $product_stock =$_POST["product_stock"];
     $product_id = $_POST['product_id'];
-    if(isset($_SESSION['cart']))
+    if($product_quantity>$product_stock){
+        echo "<script>alert('Lütfen Stoktaki Miltar Kadar Alım Yapınız')</script>";
+        header("location: single.php?product_id=$product_id");
+    }if(isset($_SESSION['cart']))
     {
         $products_array_ids= array_column($_SESSION['cart'],"product_id");
         if(!in_array('product_id', $products_array_ids)){
@@ -16,7 +21,7 @@ if(isset($_POST['add_to_cart']))
                 'product_price'=>$_POST["product_price"],
                 'product_image'=>$_POST["product_image"],
                 'product_quantity'=>$_POST["product_quantity"],
-
+               'product_stock' => $_POST ["product_stock"]
             );
            $_SESSION['cart'][$product_id] = $product_array;
         }else{
@@ -30,13 +35,14 @@ if(isset($_POST['add_to_cart']))
         $product_price = $_POST['product_price'];
         $product_image = $_POST['product_image'];
         $product_quantity = $_POST['product_quantity'];
+        $product_stock = $_POST['product_stock'];
         $product_array = array(
             'product_id'=>$product_id,
             'product_name'=>$product_name,
             'product_price'=>$product_price,
             'product_image'=>$product_image,
             'product_quantity'=>$product_quantity,
-            
+            'product_stock'=>$product_stock
         );
         $_SESSION['cart'][$product_id] = $product_array;
     }
@@ -50,6 +56,7 @@ if(isset($_POST['add_to_cart']))
         $product_quantity = $_POST["product_quantity"];
         $product_array=$_SESSION['cart'][$product_id];
         $product_array["product_quantity"]=$product_quantity;
+
          $_SESSION["cart"][$product_id] = $product_array;
          calculateSubTotal();
     }
@@ -113,7 +120,7 @@ if(isset($_POST['add_to_cart']))
             color: #3369e7;
             text-decoration: none;
             font-size: 14px;
-            background-color: none;
+            
             border:none;
             width: 100%;
         }
