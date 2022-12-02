@@ -37,7 +37,15 @@
                         </ul>
                     </nav>
                     <!-- //nav -->
-                    
+                    <div class="search-form ml-auto">
+                        <div class="form-w3layouts-grid">
+                            <form action="shop.php" method="post" class="newsletter">
+                                <input class="search" type="search" name="product_name" placeholder="Ürün Adı Giriniz">
+                                <button class="form-control btn" name="product_search"><span class="fa fa-search"></span></button>
+
+                            </form>
+                        </div>
+                    </div>
                     <div class="clearfix"></div>
                 </div>
             </div>

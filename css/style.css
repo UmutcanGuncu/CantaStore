@@ -1705,7 +1705,7 @@ h3.sub-w3ls-headf {
     text-align: left;
     padding: 5px 10px;
     color:#fff;
-    background-color: #fb774b;
+    background-color: #5b7a9a;
 }
 
 .cart td{
@@ -1725,18 +1725,18 @@ h3.sub-w3ls-headf {
 }
 
 .cart td a{
-    color:#fb774b;
+    color:#5b7a9a;
     
 }
 
 .cart .remove-btn{
-    color: #fb774b;
+    color: #5b7a9a;
     text-decoration: none;
     font-size: 14px;
 }
 
 .cart .edit-btn{
-    color: #fb774b;
+    color: #5b7a9a;
     text-decoration: none;
     font-size: 15px;
 
@@ -1755,7 +1755,7 @@ h3.sub-w3ls-headf {
 .cart-total table{
     width: 100%;
     max-width: 500px;
-    border-top: 3px solid #fb774b;;
+    border-top: 3px solid #5b7a9a;;
 }
 
 td:last-child{
@@ -1772,6 +1772,29 @@ th:last-child{
 }
 
 .checkout-btn{
-    background-color: #fb774b;
+    background-color: #5b7a9a;
     color: #fff;
+}
+#account-form{
+    width: 50%;
+    margin: 35px auto;
+    text-align: center;
+    padding: 20px;
+}
+
+#account-form input{
+    margin:5px auto;
+}
+
+
+#account-form #change-pass-btn{
+    color: #fff;
+    background-color: #5b7a9a;
+}
+
+
+.account-info #orders-btn,#logout-btn{
+    color:#5b7a9a;
+    text-decoration: none;
+
 }

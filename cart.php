@@ -26,7 +26,7 @@ if(isset($_POST['add_to_cart']))
            $_SESSION['cart'][$product_id] = $product_array;
         }else{
             echo '<script>alert("Ürün Zaten Eklendi");</script>';
-            //echo '<script>window.location="index.php";</script>';
+            //echo '<script>window.location="adminIndex.php";</script>';
         }
         
     }else{
@@ -76,100 +76,7 @@ if(isset($_POST['add_to_cart']))
 
 <!DOCTYPE html>
 <html lang="zxx">
-    <style>
-     /* Cart */
-         .cart table{
-            width: 100%;
-            border-collapse: collapse;
-        }
 
-        .cart .product-info{
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        .cart th{
-            text-align: left;
-            padding: 5px 10px;
-            color:#fff;
-            background-color: #3369e7;
-        }
-
-        .cart td{
-            padding: 10px 20px;
-        }
-
-        .cart td img{
-            width: 80px;
-            height: 80px;
-            margin-right: 10px;
-        }
-
-        .cart td input{price
-            width: 40px;
-            height: 30px;
-            padding: 5px;
-        }
-
-        .cart td a{
-            color:#3369e7;
-
-        }
-
-        .cart .remove-btn{
-            color: #3369e7;
-            text-decoration: none;
-            font-size: 14px;
-            
-            border:none;
-            width: 100%;
-        }
-
-        .cart .edit-btn{
-            color: #3369e7;
-            text-decoration: none;
-            font-size: 15px;
-            background-color: #fff;
-            border: none;
-            
-
-
-        }
-
-        .cart .product-info p{
-            margin: 3px;
-        }
-
-        .cart-total{
-            display: flex;
-            justify-content: flex-end;
-        }
-
-        .cart-total table{
-            width: 100%;
-            max-width: 500px;
-            border-top: 3px solid #3369e7;;
-        }
-
-        td:last-child{
-            text-align: right;
-        }
-
-        th:last-child{
-            text-align: right;
-        }
-
-        .checkout-container{
-            display: flex;
-            justify-content: flex-end;
-        }
-
-        .checkout-btn{
-            background-color: #3369e7;
-            color: #fff;
-        }
-
-    </style>
 <?php include("partials/header.php");
 ?>
 
@@ -200,7 +107,7 @@ if(isset($_POST['add_to_cart']))
                     <div class="product-info">
                         <img src="<?php echo $value['product_image']; ?>"/>
                         <div>
-                            <p><?php echo $value['product_name'];?></p>
+                            <a href="single.php?product_id=<?php echo $value['product_id'];?>"><p><?php echo $value['product_name'];?></p></a>
                             <small><span>TL</span><?php echo $value['product_price'];?></small>
                             <br>
                             <form method="post" action="cart.php">

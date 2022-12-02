@@ -7,7 +7,7 @@ if(isset($_GET['product_id'])){
     $stmt->execute();
     $product = $stmt->get_result();
 }else{
-    header("location: index.php");
+    header("location: adminIndex.php");
 }
 ?>
 <!DOCTYPE html>
@@ -42,7 +42,7 @@ if(isset($_GET['product_id'])){
                         <input type="hidden" name="product_name" value="<?php echo $row['product_name'];?>" />
                         <input type="hidden" name="product_price" value="<?php echo $row['product_price'];?>" />
                             <input type="hidden" name="product_stock" value="<?php echo $row['product_stock'];?>" />
-                        <div class="share-desc mt-2"><?php echo $row['product_price'];?> TL <input type="number" name="product_quantity" value="1"/></div>
+                        <div class="share-desc mt-2 font-weight-bold"><?php echo $row['product_price'];?> TL <input type="number" name="product_quantity" value="1"/></div>
                             <?php
                              $product_stock = $row["product_stock"];
 
@@ -62,11 +62,11 @@ if(isset($_GET['product_id'])){
                         </div>
                         <div class="share-desc mt-5">
                             <div class="share text-left">
-                                <h4>Ürün Açıklaması</h4>
+                                <h4 class="font-weight-bold">Ürün Açıklaması</h4>
                                 <div class="social-ficons mt-4">
                                     
                                 </div>
-                                <p class="mt-3 italic-blue"><?php echo $row['product_description'];?></p>
+                                <p class="mt-3 italic-blue font-weight-bold"><?php echo $row['product_description'];?></p>
                                 <p>
 
                                 <?php echo "Ürün Stoğu = $product_stock";?>
@@ -82,7 +82,13 @@ if(isset($_GET['product_id'])){
                 <!--/row-->
                 <h3 class="title-wthree-single my-lg-5 my-4 text-left">Beğenebilceğiniz Ürünler</h3>
                 <div class="row shop-wthree-info text-center">
-                    <?php include("includes/get_featured_products.php");
+                    <?php
+
+                    $stmt = $conn->prepare("Select * from products limit 4");
+
+                    $stmt->execute();
+
+                    $featured_product = $stmt->get_result();
                        while($row =$featured_product->fetch_assoc()){
                         ?>
                     <div class="col-md-3 shop-info-grid text-center mt-4">
