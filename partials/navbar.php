@@ -33,7 +33,10 @@
                             <li class="active"><a href="index.php">Anasayfa</a></li>
                             <li><a href="about.php">Hakkımızda</a></li>
                             <li><a href="shop.php">Ürünlerimiz</a></li>
-                            <li><a href="contact.php">İletişim</a></li>
+                            <?php if(isset($_SESSION["userId"])){
+                                echo "<li><a href='contact.php'>İletişim</a></li>";
+                            }?>
+
                         </ul>
                     </nav>
                     <!-- //nav -->

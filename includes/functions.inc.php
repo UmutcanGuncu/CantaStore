@@ -120,7 +120,7 @@ function  loginUser($conn,$uid,$pwd)
         $_SESSION['userId']=$uidExits["user_id"];
         $_SESSION['userUid']=$uidExits["userUid"];
         $_SESSION['user_name']=$uidExits["user_name"];
-        header("location: ../adminIndex.php");
+        header("location: ../index.php");
         exit();
     }
 }

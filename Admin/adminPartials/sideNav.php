@@ -18,9 +18,9 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="examples/icons.html">
+              <a class="nav-link" href="contact.php">
                 <i class="ni ni-planet text-orange"></i>
-                <span class="nav-link-text">Icons</span>
+                <span class="nav-link-text">Destek Talepleri</span>
               </a>
             </li>
             <li class="nav-item">
