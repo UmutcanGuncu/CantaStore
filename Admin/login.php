@@ -1,4 +1,11 @@
+<?php
+session_start();
+if(isset($_SESSION["adminId"]) && isset($_SESSION["adminUid"])){
+    header("location: adminIndex.php");
+}else{
 
+}
+?>
 
 <head>
   <meta charset="utf-8">

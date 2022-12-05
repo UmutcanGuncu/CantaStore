@@ -34,7 +34,7 @@ if(isset($_GET["order_detail"]) && isset($_GET["order_id"])){
                 <hr class="mx-auto">
             </div>
 
-            <table class="table">
+            <table class="table align-items-center table-flush">
                 <tr>
                     <th>Ürün Resmi</th>
                     <th>Ürün İsmi</th>

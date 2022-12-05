@@ -10,7 +10,7 @@ if(isset($_SESSION['user_name']))
     $stmt1->execute();
     $orders = $stmt1->get_result(); // sonuçları bir dizi içerisine atamış oldum aşağıda foreach ile ürünleri listeleyecem
 }else{
-    header("location: adminIndex.php");
+    header("location: index.php");
     exit();
 }
 if(isset($_POST["chance_password"])){
@@ -57,7 +57,7 @@ if(isset($_POST["chance_password"])){
                     <div class="account-info">
                         <p>İsim Soyisim = <span><?php echo $_SESSION["user_name"]; ?> </span></p>
                         <p>Kullanıcı Adı = <span><?php echo $_SESSION["userUid"]; ?> </span></p><br>
-                        <p><a href="" id="orders" class="btn btn-outline-info">Siparişleriniz</a></p><br>
+                        <p><a href="supportRequest.php" id="orders" class="btn btn-outline-info">Destek Talepleri</a></p><br>
                         <p><a href="includes/logout.inc.php" class="btn btn-outline-warning" id="logout-btn">Çıkış Yap</a></p>
                     </div>
                 </div>
@@ -136,7 +136,11 @@ if(isset($_POST["chance_password"])){
                         <div class="product-info">
                             <div>
                                 <p class="mt-3"> <?php if($row["order_status"]=="on_hold")
-                                    echo "Beklemede";?> </p>
+                                    echo "Beklemede";
+                                else
+                                    echo "Kargoya Verildi";?>
+
+                                </p>
                             </div>
                         </div>
                     </td>
