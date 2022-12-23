@@ -34,8 +34,51 @@ include ("adminPartials/head.php");?>
     <div class="container-fluid mt--6">
       <div class="row">
         <div class="col">
+            <?php
+                include ("include/connect.php");
+                $stmt =$conn->prepare("select * from users");
+                $stmt->execute();
+                $users=$stmt->get_result();
+            ?>
           <div class="card border-0">
-            
+              <div class="table-responsive">
+                  <table class="table align-items-center table-flush">
+                      <thead class="thead-light">
+                      <tr>
+                          <th scope="col" class="sort" data-sort="name">ID</th>
+                          <th scope="col" class="sort" data-sort="budget">Adı Soyadı</th>
+                          <th scope="col" class="sort" data-sort="status">E Posta Adresi</th>
+                          <th scope="col">Kullanıcı Adı</th>
+
+                      </tr>
+                      </thead>
+                      <tbody class="list">
+                      <?php while ($row=$users->fetch_assoc()){ ?>
+                      <tr>
+                          <th scope="row">
+                              <div class="media align-items-center">
+                                  <div class="media-body">
+                                      <span class="name mb-0 text-sm"><?php echo $row["user_id"]; ?></span>
+                                  </div>
+                              </div>
+                          </th>
+                          <td class="budget">
+                              <?php echo $row["user_name"]; ?>
+                          </td>
+                          <td>
+
+                              <?php echo $row["user_email"]; ?>
+
+                          </td>
+                          <td>
+                              <?php echo $row["userUid"]; ?>
+                          </td>
+
+                      </tr>
+                    <?php }?>
+                      </tbody>
+                  </table>
+              </div>
           </div>
         </div>
       </div>

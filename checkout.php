@@ -1,6 +1,6 @@
 <?php session_start();
 error_reporting(0);
-if( !empty($_SESSION['cart']) && isset($_POST['checkout'])){
+if( !empty($_SESSION['cart']) && isset($_POST['checkout']) || isset($_GET["error"])){
     
 }else{
     header("location: shop.php");
@@ -54,7 +54,10 @@ if( !empty($_SESSION['cart']) && isset($_POST['checkout'])){
                             <button type="submit" name="place_order" class="btn">Ödemeye Geç</button>
                         </div>
                         <div class="list-login-bottom text-center mt-lg-5 mt-4">
-                            
+                            <?php if($_GET["error"]=="emptyInput")
+                                {
+                                    echo "<h4>Lütfen Tüm Bilgileri Eksiksiz Doldurunuz</h4>";
+                                }?>
                           
                          </div>
                     </form>

@@ -14,7 +14,6 @@
                     <h3>En Geniş El <span>  Çantası Yelpazesi</span></h3>
                     <a href="shop.php" class="btn shop">Alışverişe Başla</a>
                 </div>
-
                 <div class="col-lg-7 banner-img">
                     <img src="images/bag.png" alt="part image" class="img-fluid">
                 </div>

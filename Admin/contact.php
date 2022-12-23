@@ -57,7 +57,7 @@ $contacts=$stmt->get_result();
                                 <form method="post" action="contactAnswer.php">
                                 <th><?php echo $row["contact_id"]; ?></th>
                                     <input type="hidden" name="contact_id" value="<?php echo $row["contact_id"]; ?>">
-                                <th><?php echo $row["contact_name"]; ?>< /th>
+                                <th><?php echo $row["contact_name"]; ?></th>
                                 <th><?php echo $row["userUid"]; ?></th>
                                 <th><?php echo $row["contact_email"]; ?></th>
                                 <th><?php echo $row["contact_tel"]; ?></th>

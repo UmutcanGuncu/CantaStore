@@ -28,28 +28,31 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <img src="images/bag1.png" class="img-fluid" alt="" />
                 </div>
                 <div class="col-lg-6 ab-info-con ab-inf-page text-left">
-                    <h4>About Our Baggage</h4>
-                    <p>Lorem ipsum dolor sit,Nulla pellentesque dolor ipsum laoreet eleifend integer,Pellentesque maximus libero.Lorem ipsum dolor sit,Nulla pellentesque dolor ipsum laoreet eleifend integer,Pellentesque maximus libero.</p>
-                    <a href="single.html" class="btn shop mt-4">Read More</a>
+                    <h4>Çantalar Hakkında Daha Fazla Bilgi Edinin</h4>
+                    <p>Çantanın tarihçesi, Orta Asya'ya kadar uzanmaktadır. Orta Asya Türkleri dokuma çanta
+                        alanında kendilerini geliştirmişlerdir. Urartular, Sümerler ve Mısırlılara ait
+                        hiyerogliflerde çanta figürü bulunmaktadır. Sümer tanrısı Anunnaki çizimlerindeki
+                        çanta dikkat çekici ilginç bir unsur olarak karşımıza çıkar</p>
+                    <a href="#" class="btn shop mt-4">Daha Fazla Bilgi</a>
                 </div>
             </div>
             <div class="row grids-wthree-info text-center">
                 <div class="col-lg-4 ab-content">
                     <div class="ab-info-con">
-                        <h4>Fast & Free Delivery</h4>
-                        <p>Lorem ipsum dolor sit,Nulla pellentesque dolor ipsum laoreet eleifend integer,Pellentesque maximus libero.</p>
+                        <h4>Hızlı ve Ücretsiz Teslimat</h4>
+                        <p>500 Tl ve Üzeri Alışverişe Ücretsiz Kargo Ayrıcalığı</p>
                     </div>
                 </div>
                 <div class="col-lg-4 ab-content">
                     <div class="ab-info-con">
-                        <h4>Safe & Secure Payments</h4>
-                        <p>Lorem ipsum dolor sit,Nulla pellentesque dolor ipsum laoreet eleifend integer,Pellentesque maximus libero.</p>
+                        <h4>Güvenli Ödeme Altyapısı</h4>
+                        <p>Kredi Kartı Bilgileriniz Veritabanlarımızda Tutulmaz</p>
                     </div>
                 </div>
                 <div class="col-lg-4 ab-content">
                     <div class="ab-info-con">
-                        <h4>100% Money Back Guarantee</h4>
-                        <p>Lorem ipsum dolor sit,Nulla pellentesque dolor ipsum laoreet eleifend integer,Pellentesque maximus libero.</p>
+                        <h4>100% Para İade Garantisi</h4>
+                        <p>Paranızı Koşulsuz Şartsız İade Ediyoruz</p>
                     </div>
                 </div>
 
@@ -65,9 +68,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
                 </div>
                 <div class="col-md-4 ab-content text-center p-lg-5 p-3 my-lg-5">
-                    <h4>Travel Must Haves</h4>
-                    <p>Lorem ipsum dolor sit,Nulla pellentesque dolor ipsum laoreet eleifend integer,Pellentesque maximus libero.</p>
-                    <a href="shop.html" class="btn shop mt-3">Shop Now</a>
+                    <h4>Seyahat Sizin İçin Önemliyse</h4>
+                    <p>Seyahatleriniz İçin Uygun Çantaları Sitemizden Temin Edebilirsiniz</p>
+                    <a href="shop.php" class="btn shop mt-3">Alışverişe Başla</a>
 
                 </div>
             </div>
@@ -78,7 +81,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <section class="banner-bottom py-5">
         <div class="container py-md-5">
 
-            <h3 class="title-wthree mb-lg-5 mb-4 text-center">Safety Meets Style </h3>
+            <h3 class="title-wthree mb-lg-5 mb-4 text-center">Stilinizi Yansıtın</h3>
             <div class="row text-center">
 
 
@@ -86,9 +89,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <img src="images/c1.jpg" class="img-fluid" alt="" />
                 </div>
                 <div class="col-md-4 content-gd-wthree ab-content py-lg-5 my-lg-5">
-                    <h4>Need Extra Space ?</h4>
-                    <p>Lorem ipsum dolor sit,Nulla pellentesque dolor ipsum laoreet eleifend integer,Pellentesque maximus libero.</p>
-                    <a href="shop.html" class="btn shop mt-3">Shop Now</a>
+                    <h4>Yeni Çantalara Mı İhtiyacınız Var?</h4>
+                    <p>O Zaman Doğru Adrestesiniz</p>
+                    <a href="shop.php" class="btn shop mt-3">Alışverişe Başla</a>
 
                 </div>
                 <div class="col-md-4 content-gd-wthree">
@@ -100,24 +103,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     </section>
     <!-- //collections-->
     <!-- /mid-section -->
-    <section class="mid-section">
-        <div class="d-lg-flex p-0">
-            <div class="col-lg-6 bottom-w3pvt-left p-lg-0">
-                <img src="images/ab1.jpg" class="img-fluid" alt="" />
-                <div class="pos-wthree">
-                    <h4 class="text-wthree">50% Off Any <br> Women's Bags</h4>
-                    <a href="shop.html" class="btn shop mt-3">Shop Now</a>
-                </div>
-            </div>
-            <div class="col-lg-6 bottom-w3pvt-left bottom-w3pvt-right p-lg-0">
-                <img src="images/ab2.jpg" class="img-fluid" alt="" />
-                <div class="pos-w3pvt">
-                    <h4 class="text-w3pvt">30% Off Any <br> Men's Bags</h4>
-                    <a href="shop.php" class="btn shop mt-3">Shop Now</a>
-                </div>
-            </div>
-        </div>
-    </section>
+
     <!-- //mid-section -->
  <?php include("partials/footer.php")?>
 

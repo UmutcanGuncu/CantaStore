@@ -41,18 +41,8 @@
                 <span class="nav-link-text">Ürün Ekleme</span>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <i class="ni ni-key-25 text-info"></i>
-                <span class="nav-link-text">Buluruz Bişeyler</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <i class="ni ni-circle-08 text-pink"></i>
-                <span class="nav-link-text">Register</span>
-              </a>
-            </li>
+
+
             <li class="nav-item">
               <a class="nav-link" href="include/logout.inc.php">
                 <i class="ni ni-send text-dark"></i>

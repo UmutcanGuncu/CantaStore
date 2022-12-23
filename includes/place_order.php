@@ -8,13 +8,18 @@ if(isset($_POST["place_order"])){
     $phone = $_POST["phone"];
     $city = $_POST["city"];
     $adress = $_POST["adress"];
+    if(empty($name)||empty($email)||empty($phone)||empty($city)||empty($adress))
+    {
+        header("location: ../checkout.php?error=emptyInput");
+        exit();
+    }
     $order_cost =$_SESSION["total"];
-    $order_status ="on_hold";
+    $order_status ="Beklemede";
     $user_id =$_SESSION['userId'];
     $order_date=date("Y-m-d  H:i:s");
     $stmt=$conn->prepare("insert into orders (order_cost,order_status,user_id,user_phone,user_city,user_address,order_date)
             values (?,?,?,?,?,?,?);");
-    $stmt->bind_param("isiisss",$order_cost,$order_status,$user_id,$phone,$city,$adress,$order_date);
+    $stmt->bind_param("isissss",$order_cost,$order_status,$user_id,$phone,$city,$adress,$order_date);
     $stmt->execute();
     
     $order_id = $stmt->insert_id;
@@ -35,6 +40,6 @@ if(isset($_POST["place_order"])){
 
 
         }
-        //unset($_SESSION["cart"]); //ödeme işlemi başarılı olduğunda 
+        unset($_SESSION["cart"]); //ödeme işlemi başarılı olduğunda
         header('location: ../payment.php?order_status="Complate"');
 }

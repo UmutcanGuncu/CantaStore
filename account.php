@@ -137,8 +137,10 @@ if(isset($_POST["chance_password"])){
                             <div>
                                 <p class="mt-3"> <?php if($row["order_status"]=="on_hold")
                                     echo "Beklemede";
-                                else
-                                    echo "Kargoya Verildi";?>
+                                else{
+                                    echo $row["order_status"];
+                                }
+                                ?>
 
                                 </p>
                             </div>
